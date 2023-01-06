@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 
 import { BingoCardMatrix } from "./components/bingo-card";
 
-const StepContainer = styled.div`
+const NameContainer = styled.div`
   background-color: #e6efea;
   width: 300px;
   border-radius: 15px;
@@ -35,7 +35,7 @@ const Container = styled.div`
   gap: 12px;
 `;
 
-const NameContainer = styled.div`
+const NameForm = styled.div`
   display: flex;
   align-items: center;
   gap: 5px;
@@ -86,8 +86,8 @@ const App: React.FC = () => {
   return (
     <Page>
       <Container>
-        <StepContainer>
-          <NameContainer>
+        <NameContainer>
+          <NameForm>
             <Label>Name* </Label>
             <Input
               name="enter-name"
@@ -95,14 +95,14 @@ const App: React.FC = () => {
               value={playerName}
               onChange={handleNameChange}
             />
-          </NameContainer>
+          </NameForm>
           <Button
             onClick={() => setCanPlay(true)}
             disabled={!isStartPlayingButtonEnabled}
           >
             Start playing!
           </Button>
-        </StepContainer>
+        </NameContainer>
 
         {canPlay && (
           <BingoCardContainer data-testid="bingo-card">

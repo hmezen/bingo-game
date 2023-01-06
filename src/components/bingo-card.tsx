@@ -25,7 +25,7 @@ const Header = styled.div`
   justify-content: flex-start;
 `;
 
-const HeaderCard = styled.div`
+const ColumnKey = styled.div`
   width: 100px;
   text-align: center;
 `;
@@ -36,7 +36,7 @@ const Span = styled.span`
   font-weight: bold;
 `;
 
-const StepContainer = styled.div`
+const ButtonsContainer = styled.div`
   background-color: #e6efea;
   width: 460px;
   border-radius: 15px;
@@ -113,9 +113,9 @@ export const BingoCardMatrix: React.FC = () => {
       <Card>
         <Header>
           {Object.keys(ColumnTypes).map((value) => (
-            <HeaderCard key={value}>
+            <ColumnKey key={value}>
               <Span>{value}</Span>
-            </HeaderCard>
+            </ColumnKey>
           ))}
         </Header>
 
@@ -129,7 +129,7 @@ export const BingoCardMatrix: React.FC = () => {
         </Body>
       </Card>
 
-      <StepContainer>
+      <ButtonsContainer>
         {!isBingo && (
           <>
             <Button onClick={handleDrawNewNumber}>Draw new number</Button>
@@ -144,7 +144,7 @@ export const BingoCardMatrix: React.FC = () => {
             <Button onClick={handleRestart}>Restart</Button>
           </>
         )}
-      </StepContainer>
+      </ButtonsContainer>
     </>
   );
 };
