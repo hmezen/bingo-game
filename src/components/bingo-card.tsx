@@ -97,8 +97,8 @@ export const BingoCardMatrix: React.FC = () => {
       setDrawnNumbers(drawnNumbers.concat(newNumber));
     }
 
-    updateBingoCardGivenNewNumber(newNumber);
     setDrawnNumber(newNumber);
+    updateBingoCardGivenNewNumber(newNumber);
   };
 
   const handleRestart = () => {
