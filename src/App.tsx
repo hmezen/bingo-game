@@ -1,4 +1,4 @@
-import React from "react";
+import { FC, useState } from "react";
 import styled from "@emotion/styled";
 
 import { BingoCardMatrix } from "./components/bingo-card";
@@ -69,9 +69,9 @@ const WelcomeText = styled.label`
   font-size: 30px;
 `;
 
-const App: React.FC = () => {
-  const [playerName, setPlayerName] = React.useState<string>("");
-  const [canPlay, setCanPlay] = React.useState<boolean>(false);
+const App: FC = () => {
+  const [playerName, setPlayerName] = useState<string>("");
+  const [canPlay, setCanPlay] = useState<boolean>(false);
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPlayerName(e.target.value);

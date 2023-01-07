@@ -1,4 +1,3 @@
-import React from "react";
 import { render, screen } from "@testing-library/react";
 import { BingoCardMatrix } from "./bingo-card";
 import * as util from "../util";
@@ -59,7 +58,7 @@ describe("BingoCardColumn unit test suite", () => {
     jest.restoreAllMocks();
   });
 
-  it("should trigger `generateBingoCard` only one time in first render ", () => {
+  it("should trigger `generateBingoCard` only one time in first render", () => {
     jest.spyOn(util, "generateBingoCard");
 
     setup();
@@ -115,7 +114,7 @@ describe("BingoCardColumn unit test suite", () => {
     expect(util.generateRandomNumberInsideRange).toHaveBeenCalledTimes(1);
   });
 
-  it("should trigger `updateBingoCard` when user draws new number ", () => {
+  it("should trigger `updateBingoCard` when user draws new number", () => {
     jest.spyOn(util, "generateBingoCard").mockReturnValue(bingoCard5x5);
     jest.spyOn(util, "updateBingoCard");
     jest
@@ -137,7 +136,7 @@ describe("BingoCardColumn unit test suite", () => {
     );
   });
 
-  it("should trigger `checkIfBINGO` when user draws new number ", () => {
+  it("should trigger `checkIfBINGO` when user draws new number", () => {
     jest.spyOn(util, "checkIfBINGO");
 
     setup();

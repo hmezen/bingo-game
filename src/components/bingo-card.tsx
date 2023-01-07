@@ -1,4 +1,4 @@
-import React from "react";
+import { useState, FC } from "react";
 import styled from "@emotion/styled";
 import {
   generateBingoCard,
@@ -67,13 +67,11 @@ const Number = styled.div`
 
 const Body = Header;
 
-export const BingoCardMatrix: React.FC = () => {
-  const [bingoCard, setBingoCard] = React.useState<BingoCard>(
-    generateBingoCard()
-  );
-  const [drawnNumber, setDrawnNumber] = React.useState<number | null>(null);
-  const [isBingo, setIsBingo] = React.useState<boolean>(false);
-  const [drawnNumbers, setDrawnNumbers] = React.useState<number[]>([]);
+export const BingoCardMatrix: FC = () => {
+  const [bingoCard, setBingoCard] = useState<BingoCard>(generateBingoCard());
+  const [drawnNumber, setDrawnNumber] = useState<number | null>(null);
+  const [isBingo, setIsBingo] = useState<boolean>(false);
+  const [drawnNumbers, setDrawnNumbers] = useState<number[]>([]);
 
   const updateBingoCardGivenNewNumber = (newNumber: number) => {
     const updatedBingoCard = updateBingoCard(bingoCard, newNumber);

@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import styled from "@emotion/styled";
 import { BingoBox } from "../util";
 
@@ -18,7 +18,7 @@ export interface BingoCardBoxProps {
   box: BingoBox;
 }
 
-export const BingoCardBox: React.FC<BingoCardBoxProps> = ({ box }) => {
+export const BingoCardBox: FC<BingoCardBoxProps> = ({ box }) => {
   const { isChecked, value } = box;
 
   return (
