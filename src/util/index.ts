@@ -1,5 +1,5 @@
-const BINGO_CARD_SIDE_LENGTH: number = 5;
-const FREE_BOX_POSITION: number = 2;
+const BINGO_CARD_SIDE_LENGTH = 5;
+const FREE_BOX_POSITION = 2;
 
 export type BingoBox = {
   isChecked: boolean;
