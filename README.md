@@ -2,7 +2,7 @@
 
 ## Description
 
-A single player Bingo game, developed using Typescript and React for the user interface. The player starts the game by inputting their name, which is visible throughout the game session. The game consists of a randomly generated and valid Bingo card and a mechanism for advancing the game (drawing the next number), e.g. a button. The state of the Bingo card is visually updated as the game progresses, and the game logic determines when the winning condition is met. The player has the option to restart the game when finished.
+A single player Bingo game, developed using Typescript and React for the user interface. The player starts the game by inputting their name, which is visible throughout the game session. The game consists of a randomly generated and valid Bingo card and a mechanism for advancing the game (drawing the next number). The state of the Bingo card is visually updated as the game progresses, and the game logic determines when the winning condition is met. The player has the option to restart the game when finished.
 
 ## Features
 
