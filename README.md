@@ -1,6 +1,22 @@
-# Getting Started with Create React App
+# Bingo Game README
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Description
+
+A single player Bingo game, developed using Typescript and React for the user interface. The player starts the game by inputting their name, which is visible throughout the game session. The game consists of a randomly generated and valid Bingo card and a mechanism for advancing the game (drawing the next number), e.g. a button. The state of the Bingo card is visually updated as the game progresses, and the game logic determines when the winning condition is met. The player has the option to restart the game when finished.
+
+## Features
+
+* Player name input at game launch
+* Randomly generated and valid Bingo card
+* Mechanism for advancing the game (drawing the next number)
+* Visually updated state of Bingo card as the game progresses
+* Logic for determining the winning condition
+* Possibility to restart the game when finished
+
+## Comming soon
+
+* Game stats after finishing the game
+* History of previously played games
 
 ## Available Scripts
 
@@ -29,18 +45,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Contributions
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+If you wish to contribute to the development of the Bingo game, feel free to create a pull request with your changes.
