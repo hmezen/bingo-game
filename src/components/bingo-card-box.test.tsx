@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
-import { BingoCardBox, BingoCardBoxProps } from "./bingo-box";
+import { BingoCardBox, BingoCardBoxProps } from "./bingo-card-box";
 
-describe("BingoCardBox unit test suite", () => {
+describe("BingoCardBox", () => {
   const props: BingoCardBoxProps = {
     box: { isChecked: false, value: 15 },
   };

@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
-import { BingoCardColumn, BingoCardColumnProps } from "./bingo-column";
+import { BingoCardColumn, BingoCardColumnProps } from "./bingo-card-column";
 
-jest.mock("./bingo-box", () => ({
+jest.mock("./bingo-card-box", () => ({
   BingoCardBox: () => {
     return <div data-testid="box" />;
   },
 }));
 
-describe("BingoCardColumn unit test suite", () => {
+describe("BingoCardColumn", () => {
   const props: BingoCardColumnProps = {
     column: [
       {

@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import { BingoCardMatrix } from "./bingo-card";
+import { BingoCardMatrix } from "./bingo-card-matrix";
 import * as util from "../util";
 import userEvent from "@testing-library/user-event";
 
@@ -43,13 +43,13 @@ const bingoCard5x5: util.BingoCard = [
 
 const newDrawnNoBINGONumber = 16;
 
-jest.mock("./bingo-column", () => ({
+jest.mock("./bingo-card-column", () => ({
   BingoCardColumn: () => {
     return <div data-testid="column" />;
   },
 }));
 
-describe("BingoCardColumn unit test suite", () => {
+describe("BingoCardMatrix", () => {
   const setup = () => {
     return render(<BingoCardMatrix />);
   };

@@ -9,7 +9,7 @@ import {
   checkIfBINGO,
   Range,
 } from "../util";
-import { BingoCardColumn } from "./bingo-column";
+import { BingoCardColumn } from "./bingo-card-column";
 
 const Card = styled.div`
   width: 500px;
@@ -69,7 +69,6 @@ const Body = Header;
 
 export const BingoCardMatrix: FC = () => {
   const [bingoCard, setBingoCard] = useState<BingoCard>(generateBingoCard());
-  const [drawnNumber, setDrawnNumber] = useState<number | null>(null);
   const [isBingo, setIsBingo] = useState<boolean>(false);
   const [drawnNumbers, setDrawnNumbers] = useState<number[]>([]);
 
@@ -95,16 +94,16 @@ export const BingoCardMatrix: FC = () => {
       setDrawnNumbers(drawnNumbers.concat(newNumber));
     }
 
-    setDrawnNumber(newNumber);
     updateBingoCardGivenNewNumber(newNumber);
   };
 
   const handleRestart = () => {
     setBingoCard(generateBingoCard());
     setIsBingo(false);
-    setDrawnNumber(null);
     setDrawnNumbers([]);
   };
+
+  const lastDrawnNumber = drawnNumbers[drawnNumbers.length - 1];
 
   return (
     <>
@@ -131,7 +130,7 @@ export const BingoCardMatrix: FC = () => {
         {!isBingo && (
           <>
             <Button onClick={handleDrawNewNumber}>Draw new number</Button>
-            {drawnNumber !== null && <Number>{drawnNumber}</Number>}
+            {lastDrawnNumber && <Number>{lastDrawnNumber}</Number>}
           </>
         )}
 

@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import styled from "@emotion/styled";
 
-import { BingoCardMatrix } from "./components/bingo-card";
+import { BingoCardMatrix } from "./components/bingo-card-matrix";
 
 const NameContainer = styled.div`
   background-color: #e6efea;

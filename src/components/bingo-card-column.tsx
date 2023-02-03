@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styled from "@emotion/styled";
 import { BingoColumn } from "../util";
-import { BingoCardBox } from "./bingo-box";
+import { BingoCardBox } from "./bingo-card-box";
 
 const Column = styled.div`
   width: 100px;
